@@ -1,0 +1,53 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iinclude",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror=return-type",
+      "-c",
+      "-o",
+      "build/source/node.o",
+      "source/node.c"
+    ],
+    "directory": "/home/quqin/Dev/linkedList3",
+    "file": "/home/quqin/Dev/linkedList3/source/node.c",
+    "output": "/home/quqin/Dev/linkedList3/build/source/node.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iinclude",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror=return-type",
+      "-c",
+      "-o",
+      "build/source/arena.o",
+      "source/arena.c"
+    ],
+    "directory": "/home/quqin/Dev/linkedList3",
+    "file": "/home/quqin/Dev/linkedList3/source/arena.c",
+    "output": "/home/quqin/Dev/linkedList3/build/source/arena.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Iinclude",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror=return-type",
+      "-c",
+      "-o",
+      "build/apps/main.o",
+      "apps/main.c"
+    ],
+    "directory": "/home/quqin/Dev/linkedList3",
+    "file": "/home/quqin/Dev/linkedList3/apps/main.c",
+    "output": "/home/quqin/Dev/linkedList3/build/apps/main.o"
+  }
+]
