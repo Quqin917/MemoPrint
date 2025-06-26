@@ -55,3 +55,4 @@ dkms.conf
 # Custom Development Generations
 .cache/
 build/
+compile_commands.json
