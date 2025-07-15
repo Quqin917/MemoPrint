@@ -1,2 +1,2 @@
-# MemoPrint
-A library that combines memory management, generic printing and custom data structures to optimize and simplify development process. This project handles dynamic memory allocation, easy-to-implement print functions, and data storage solutions.
+# StructArena
+A library that combines memory management and custom data structures to optimize and simplify development process. This project handles dynamic memory allocation, and data storage solutions. 
