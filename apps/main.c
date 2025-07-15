@@ -1,47 +1,28 @@
+//  Copyright (c) 2025 Quqin
+
+#include <stdio.h>
+
 #include "arena.h"
-#include "print.h"
+#include "linked.h"
 
-#define cast(...)
-
-typedef struct
-{
-  char *data_;
-  size_t capacity_;
-  size_t count_;
-} Array;
+Arena arena = {0};
 
 int main (void)
 {
-  Arena arena = {0};
+  linkedList linked = _createLinked(INT);
 
-  Array arr = {0};
+  appendHeadLinked(&linked, 1);
 
-  int tmp[5] = {1, 2, 3, 4, 5};
+  appendTailLinked(&linked, 3);
 
-  arr.data_ = cast(arr.data_)
-    arena_realloc(&arena, &arr, arr.capacity_, 5 * sizeof(int));
-  arr.capacity_ = 5 * sizeof(int);
+  insertGivenPos(&linked, 2, 1);
 
-  arena_memcpy(arr.data_, tmp, 5 * sizeof(int));
-  arr.count_ = 5;
+  printLinkedList(&linked);
 
-  // char tmp[5] = {'a', 'b', 'c', 'd', 'e'};
+  printf("size of linked list: %d\n", (int)linked.size_);
+  printf("types of data: %d \n", linked.type_);
 
-  // arr.data_ = cast(arr.data_)
-  //   arena_realloc(&arena, &arr, arr.capacity_, 5 * sizeof(char));
-  // arr.capacity_ = 5 * sizeof(char);
-  //
-  // arena_memcpy(arr.data_, tmp, 5 * sizeof(char));
-  // arr.count_ = 5;
-
-  for (size_t i = 0; i < arr.count_; i++)
-  {
-    int *val = (int *)arena_at(&arena, i, sizeof(int));
-    print(*val);
-  }
-  print("\n");
-
-  free_arena(&arena);
+  freeArena(&arena);
 
   return 0;
 }

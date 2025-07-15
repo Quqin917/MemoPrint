@@ -5,7 +5,7 @@
 
 # Compiler and output binary.
 CC := gcc
-CFLAGS := -std=c99 -Wall -pedantic
+CFLAGS := -Wall -pedantic -g
 TARGET := linked
 
 # Output directory for object and dependency files.

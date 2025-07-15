@@ -1,14 +1,17 @@
 #ifndef NODE_H
 #define NODE_H
 
-typedef union {
-  int data_i;
-  double data_b;
-  char data_c;
-} obj_node;
+#include <stddef.h>
+#include <stdint.h>
 
-typedef struct {
-  obj_node value_;
-} node;
+typedef struct node node;
 
-#endif  // !NODE_H
+struct node
+{
+  struct node *next_;
+  intptr_t data_;
+};
+
+void *createNode(intptr_t data);
+
+#endif // !NODE_H
